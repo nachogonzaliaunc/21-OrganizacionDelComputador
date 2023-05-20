@@ -1,29 +1,29 @@
-// Traducir el siguiente programa "C" a LEGv8.
-// La asignacion de variables a registros X0=A, X1=s, X2=i, X3=j, X9=N
-// Notar que en "C" los arreglos bidimensionales se representan en memoria usando un orden por filas
-// es decir &A[i][j] = A + 8*(i*N+j)
+/*
+  Traducir el siguiente programa "C" a LEGv8.
+  La asignacion de variables a registros X0=A, X1=s, X2=i, X3=j, X9=N
+  Notar que en "C" los arreglos bidimensionales se representan en memoria usando un orden por filas
+  es decir &A[i][j] = A + 8*(i*N+j)
 
 
-// #define N (1<<10)
-// long A[N][N], s, i, j;
-// s=0;
-// for (i=0; i<N; ++i)
-//   for (j=0; j<N; ++j)
-//     s += A[i][j];
+  #define N (1<<10)
+  long A[N][N], s, i, j;
+  s=0;
+  for (i=0; i<N; ++i)
+    for (j=0; j<N; ++j)
+      s += A[i][j];
 
+  
+  7.2) Se puede hacer lo mismo sin usar ninguna variable indice i, j
 
-
-// 7.2)
-// Se puede hacer lo mismo sin usar ninguna variable indice i, j
-
-
-// nuevo codigo en C:
-// #define N (1<<10)
-// long A[N][N], s, i, j;
-// s=0;
-// finalAddress = &A[0][0] + (N * N)
-// for (i=0; i!=finalAddress; ++i)
-//   s += A[i];
+  
+  nuevo codigo en C:  
+  #define N (1<<10)
+  long A[N][N], s, i, j;
+  s=0;
+  finalAddress = &A[0][0] + (N * N)
+  for (i=0; i!=finalAddress; ++i)
+    s += A[i];
+*/
 
 
 .data

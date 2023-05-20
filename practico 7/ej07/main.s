@@ -1,23 +1,25 @@
-// Traducir el siguiente programa "C" a LEGv8.
-// La asignacion de variables a registros X0=A, X1=s, X2=i, X3=j, X9=N
-// Notar que en "C" los arreglos bidimensionales se representan en memoria usando un orden por filas
-// es decir &A[i][j] = A + 8*(i*N+j)
+/* 
+  Traducir el siguiente programa "C" a LEGv8.
+  La asignacion de variables a registros X0=A, X1=s, X2=i, X3=j, X9=N
+  Notar que en "C" los arreglos bidimensionales se representan en memoria usando un orden por filas
+  es decir &A[i][j] = A + 8*(i*N+j)
 
-
-// #define N (1<<10)
-// long A[N][N], s, i, j;
-// s=0;
-// for (i=0; i<N; ++i)
-//   for (j=0; j<N; ++j)
-//     s += A[i][j];
+  #define N (1<<10)
+  long A[N][N], s, i, j;
+  s=0;
+  for (i=0; i<N; ++i)
+    for (j=0; j<N; ++j)
+      s += A[i][j];
+*/
 
 
 .data
   N: .dword 3 
   A: .dword 1,7,2,44,3,21,1,2,3
-  // A = |1   7   2|
-  //     |44  3  21|
-  //     |1   2   3|
+  /* A = |1   7   2|
+         |44  3  21|
+         |1   2   3|
+  */
 
 .text
   ldr X0, =A            // X3 <= &A[0][0]
@@ -45,6 +47,3 @@
   end:
 
 infloop: B infloop
-
-// 7.2)
-// Se puede hacer lo mismo sin usar ninguna variable indice i, j

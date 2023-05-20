@@ -1,14 +1,16 @@
-// Traducir el siguiente programa en C a ensamblador LEGv8 dada la asignacion de varialbles
-// a los registros X0=str, X1=found, X2=i, X9=N. El numero 48 se corresponde con el caracter
-// '0' en ASCII, por lo tanto el programa cuenta la cantidad de '0's que aparecen en una
-// cadena de caracteres de longitud N
+/*
+	Traducir el siguiente programa en C a ensamblador LEGv8 dada la asignacion de varialbles
+	a los registros X0=str, X1=found, X2=i, X9=N. El numero 48 se corresponde con el caracter
+	'0' en ASCII, por lo tanto el programa cuenta la cantidad de '0's que aparecen en una
+	cadena de caracteres de longitud N
 
 
-// #define N (1<<N)
-// char *str;
-// long found, i;
-// for (found=0, i=0; i!=N; ++i)
-//   found += (str[i] == 48);
+	#define N (1<<N)
+	char *str;
+	long found, i;
+	for (found=0, i=0; i!=N; ++i)
+		found += (str[i] == 48);
+*/
 
 
 .data
