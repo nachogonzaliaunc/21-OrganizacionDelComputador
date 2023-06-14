@@ -18,16 +18,16 @@ Rd(X17) = 10001
 
 
 
-// 3.2) op=0x7c2, Rm=12, Rn=3, const=0x4
+// 3.2) op=0x7c2, Rn=12, Rt=3, const=0x4
 
 como op=0x7c2, sabmos que se trata de la operacion LDUR
 
 entonces la instruccion en assembler es:
-LDUR X12, [X3, #4]
+LDUR X3, [X12, #4]
 
 y la representacion binaria es: 1111 0110 0100 0000 0100 0000 0110 1100
 opcode = 11110110010
 DT_adress(#4) = 000000100
 op = 00
-Rn(X3) = 00011
-Rt(X12) = 01100
+Rn(X12) = 01100
+Rt(X3) = 00011
