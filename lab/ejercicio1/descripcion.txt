@@ -1,0 +1,9 @@
+Integrantes Grupo:
+
+- Gonzalia Alvaro Tomas, 43150094
+- Gonzalia Ignacio Agustin, 41680508
+- Usaj Santiago, 41321444
+
+Descripcion del Ejercicio:
+
+El codigo realiza un dibujo de un cohete y la luna. Al presionar la tecla "W", la luna cambia de forma y tamaño. Cuando presionamos la tecla "A", el dibujo vuelve al original.
